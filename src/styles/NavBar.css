@@ -1,0 +1,85 @@
+/* Background + subtle bottom border */
+
+.navbar {
+  background-color: #FDF6F0;
+  border-bottom: 1px solid #E6D8C3;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 32px 48px; /* taller and wider */
+
+}
+
+/* Container: flex row, centered content */
+
+.navbar-container {
+  width: 100%;          /* full width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px; /* or 1600px for ultra-wide */
+   gap: 10px; /* reduce space between logo and links */
+     align-items: center;
+}
+
+/* Logo stays left */
+.navbar-logo {
+  flex-shrink: 0;  flex-shrink: 0; /* prevents shrinking */
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+   gap: 19px; /* space between image and text */
+}
+
+.navbar-logo img {
+  height: 160px; /* larger logo */
+  width: auto;
+  border: 2px solid #6B4C3B; /* soft brown edge */
+    border-radius: 45px; /* gentle roundness */
+  background-color: #fcead7; /* warm ivory backdrop */
+  padding: 4px;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* elegant depth */
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.03); /* subtle hover effect */
+}
+.logo-text {
+  font-family: 'Parisienne', cursive;
+  font-size: 35px;
+  font-weight: 600;
+  color: #6B4C3B;
+}
+
+/* Links centered with spacing */
+.navbar-links {
+  flex: 1; /* flex-1 */
+  display: flex;
+  justify-content: center; /* justify-center */
+  gap: 67px; /* space-x-12 */
+}
+
+/* Link styling */
+
+ /* font-family: 'Georgia', 'Times New Roman', serif; /* elegant serif */
+.navbar-link {
+  font-family: 'Parisienne', cursive; /* or Dancing Script */
+  font-size: 36px;       /* larger text */
+  font-weight: 600;      /* more presence */
+  color: #6B4C3B;  /* rich brown */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #A67C52; /* lighter brown on hover */
+}
+
+
+/* Responsive: hide links on small screens */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+}

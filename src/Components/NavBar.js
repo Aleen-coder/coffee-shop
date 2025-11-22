@@ -13,7 +13,10 @@ function NavBar() {
         {/* Logo on the left */}
         <Link to="/" className="navbar-logo">
           <img src={img16} alt="Logo" /> 
-           <span className="logo-text">Cafe Savore</span>
+         <span class="logo-wrapper">
+    <span class="logo-text">Cafe Savore</span>
+     </span>
+
         </Link>
 
         {/* Navigation links centered */}

@@ -1,3 +1,6 @@
+
+/*(array of coffee objects). */
+
 import Espresso from "../assets/Espresso.jpg";
 import Americano from "../assets/Americano.jpg";
 import Latte from "../assets/Latte.jpg";

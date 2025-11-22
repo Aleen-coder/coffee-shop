@@ -1,0 +1,62 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  min-height: 100vh;         /* full screen height */
+    flex-direction: column;    /* stack content vertically */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.content {
+  z-index: 2;
+  background-color: rgba(253, 246, 240, 0.9); /* soft cream */
+  padding: 70px;
+  border-radius: 20px;
+    width: 87%;                 /* responsive width */
+  max-width: 1000px;
+  margin: 60px auto;/*margin around*/ 
+background-color: rgba(255, 255, 255, 0.7); /* lighter, more transparent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+.intro-text h1 {
+  font-family: 'Parisienne', cursive;
+  font-size: 56px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-align: center;
+/* color: #6B4C3B; /* coffee brown */
+  color: #6B4C3B; /* coffee brown */
+}
+
+.intro-text p {
+  font-family: 'Georgia', serif;
+  font-size: 30px;
+  margin-bottom: 16px;
+
+    color: #4A3C2A; /* darker brown */
+  font-weight: 500;
+
+}
+
+.btn {
+  background-color: #A67C52;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #8c6239;
+}

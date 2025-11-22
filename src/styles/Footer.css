@@ -1,0 +1,50 @@
+.footer {
+  background-color: #F7EFE7;        /* nude cream */
+  color: #6B4C3B;                   /* soft coffee brown */
+  padding: 30px 20px;
+  margin-top: auto;
+  text-align: center;
+  border-top: 1px solid #e6d8c9;    /* thin soft line */
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.footer-sub {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #6B4C3B;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  color: #3e2b1f;
+}
+
+.footer-copy {
+  margin-top: 15px;
+  font-size: 12px;
+  opacity: 0.7;
+}

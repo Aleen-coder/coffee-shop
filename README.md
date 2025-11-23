@@ -34,4 +34,8 @@ Live demo: https://Aleen-coder.github.io/coffee-shop
 npm run build
 
 # Screenshots of the UI:
+### Homepage
+![Homepage](screenshots/Home.png)
 
+### Menu Page
+![Menu](screenshots/Menu.png)

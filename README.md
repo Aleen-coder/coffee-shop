@@ -51,5 +51,6 @@ https://Aleen-coder.github.io/coffee-shop
 ![Cart](screenshots/Cart.PNG)
 
 ### About Page
-![About 1](screenshots/About1.PNG)
-![About 2](screenshots/About2.PNG)
+![a 1](screenshots/a1.PNG)
+![a 2](screenshots/a2.PNG)
+![a 3](screenshots/a3.PNG)

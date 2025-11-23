@@ -47,11 +47,13 @@ https://Aleen-coder.github.io/coffee-shop
 ### Menu Page
 <img src="screenshots/Menu.PNG" width="500"/>
 
+
 ### Cart Page
 <img src="screenshots/Cart.PNG" width="500"/>
 
+
 ### About Page
-<img src="screenshots/a1.PNG" width="500"/>
-<img src="screenshots/a2.PNG" width="500"/>
+<img src="screenshots/a1.PNG" width="500" style="margin-bottom: -10px;"/>
+<img src="screenshots/a2.PNG" width="500" style="margin-bottom: -10px;"/>
 <img src="screenshots/a3.PNG" width="500"/>
 

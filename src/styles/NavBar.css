@@ -148,11 +148,15 @@
 
 
 @media (max-width: 480px) {
-  .navbar-links {
-    gap: 20px;
+   .navbar-links {
+    gap: 10px; /* smaller spacing */
+    flex-wrap: wrap; /* allow links to wrap if needed */
+    justify-content: flex-start; /* optional: align left */
+ navbar-link {
+    font-size: 18px;
   }
-  .navbar-link {
-    font-size: 24px;
+      .navbar-container {
+    padding: 12px 20px; /* reduce padding for small screens */
   }
 }
 

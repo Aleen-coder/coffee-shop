@@ -5,19 +5,30 @@ import CoffeeMenu from "./pages/CoffeeMenu";
 import About from "./pages/About"; // optional
 import Contact from "./pages/Contact"; // optional
 import img16 from "./assets/img16.jpg";
-
+import Footer from "./Components/Footer";
+import Cart from "./Components/Cart";
+import { CartProvider } from "./Components/CartContext";
 function App() {
   return (
+      <CartProvider>
     <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<CoffeeMenu />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div className="app-container">
+        <NavBar />
+         <Cart /> {/* <-- always visible toggle cart on all pages */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<CoffeeMenu />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+         
+        </Routes>
+
+        {/* Global Footer */}
+         <Footer />
+      </div>
     </Router>
-    
+    </CartProvider>
   );
 }
+
 export default App;

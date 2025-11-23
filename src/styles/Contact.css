@@ -187,3 +187,110 @@
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0px 8px 18px rgba(138, 96, 62, 0.3);
 }
+/* ===== RESPONSIVE ===== */
+
+/* Tablets: 768px and below */
+@media (max-width: 768px) {
+  .about-container, .contact-container {
+    padding: 40px 20px;
+  }
+
+  .about-card, .contact-card {
+    padding: 35px 25px;
+  }
+
+  .about-title, .contact-title {
+    font-size: 36px;
+  }
+
+  .about-section h3 {
+    font-size: 24px;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 20px;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-member h4 {
+    font-size: 20px;
+  }
+
+  .team-member p {
+    font-size: 15px;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+
+  .contact-btn {
+    font-size: 18px;
+    padding: 16px 0;
+  }
+}
+
+/* Phones: 480px and below */
+@media (max-width: 480px) {
+  .about-container, .contact-container {
+    padding: 25px 15px;
+  }
+
+  .about-card, .contact-card {
+    padding: 25px 20px;
+  }
+
+  .about-title, .contact-title {
+    font-size: 28px;
+  }
+
+  .about-section h3 {
+    font-size: 20px;
+  }
+
+  .about-section p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+    gap: 15px;
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-member h4 {
+    font-size: 18px;
+  }
+
+  .team-member p {
+    font-size: 14px;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .contact-btn {
+    font-size: 16px;
+    padding: 14px 0;
+  }
+}

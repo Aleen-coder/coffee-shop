@@ -76,9 +76,19 @@
 .navbar-links {
   flex: 1; /* flex-1 */
   display: flex;
-  justify-content: center; /* justify-center */
-  gap: 100px; /* space-x-12 */
+   justify-content: center; /* center the links */
+  gap: 100px; /* space between links  */
+   flex-wrap: nowrap; /*never wrap to next line  */
+     overflow-x: auto;        /* allow horizontal scroll if too small */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
 }
+
+/* scrollbar is hidded  but still allow scrolling */
+.navbar-links::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 /* Link styling */
 
@@ -98,10 +108,52 @@
   color: #A67C52; /* lighter brown on hover */
 }
 
+/* ===== Responsive adjustments to keep links in one line ===== */
 
-/* Responsive: hide links on small screens */
-@media (max-width: 768px) {
+
+
+/* Progressive scaling */
+@media (max-width: 1024px) {
   .navbar-links {
-    display: none;
+    gap: 70px; /* smaller spacing */
+  }
+  .navbar-link {
+    font-size: 45px;
   }
 }
+
+
+
+
+
+@media (max-width: 768px) {
+  .navbar-links {
+    gap: 50px;
+  }
+  .navbar-link {
+    font-size: 38px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .navbar-links {
+    gap: 35px;
+  }
+  .navbar-link {
+    font-size: 30px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .navbar-links {
+    gap: 20px;
+  }
+  .navbar-link {
+    font-size: 24px;
+  }
+}
+
+

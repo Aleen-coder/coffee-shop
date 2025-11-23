@@ -155,3 +155,97 @@
   font-weight: 600;
   color: #7B4B2A;
 }
+/* Tablets: 768px and below */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 25px;
+    margin: 25px auto;
+  }
+
+  .about-card {
+    padding: 25px;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-section h3 {
+    font-size: 22px;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 team members per row */
+    gap: 20px;
+  }
+
+  .team-member img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-member h4 {
+    font-size: 18px;
+  }
+
+  .team-member p {
+    font-size: 15px;
+  }
+}
+
+/* Phones: 480px and below */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-section h3 {
+    font-size: 20px;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr; /* 1 team member per row */
+    gap: 15px;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-member h4 {
+    font-size: 18px;
+  }
+
+  .team-member p {
+    font-size: 14px;
+  }
+   .testimonial {
+    padding: 15px;
+    font-size: 15px;
+  }
+    .about-list li {
+    font-size: 14px;
+    padding: 8px 12px;
+      line-height: 1.4;
+  }
+}

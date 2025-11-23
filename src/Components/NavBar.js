@@ -25,6 +25,7 @@ function NavBar() {
           <Link to="/menu" className="navbar-link">Coffee Menu</Link>
           <Link to="/about" className="navbar-link">About</Link>
           <Link to="/contact" className="navbar-link">Contact</Link>
+   
         </div>
       </div>
     </nav>

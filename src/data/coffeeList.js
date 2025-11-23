@@ -2,7 +2,7 @@
 /*(array of coffee objects). */
 
 import Espresso from "../assets/Espresso.jpg";
-import Americano from "../assets/Americano.jpg";
+import Americano from "../assets/Americano.avif";
 import Latte from "../assets/Latte.jpg";
 import Cappuccino from "../assets/Cappuccino.jpg";
 import Mocha from "../assets/Mocha.png";
@@ -19,7 +19,7 @@ export const CoffeeList = [
       "A bold, concentrated shot—pure coffee energy wrapped in a small, elegant moment.",
     popularity: 10,
     recommendedServing: "Single or double shot",
-    price: "$3.00",
+    price: 3.00,
   },
 
   {
@@ -30,7 +30,7 @@ export const CoffeeList = [
       "A gentle dilution of espresso that keeps the soul of the bean alive while softening its edges.",
     popularity: 9,
     recommendedServing: "Tall cup, hot",
-    price: "$3.50",
+    price: 3.50,
   },
 
   {
@@ -41,7 +41,7 @@ export const CoffeeList = [
       "A smooth harmony of espresso wrapped in warm milk—creamy, calm, and effortlessly comforting.",
     popularity: 10,
     recommendedServing: "Hot, with light foam",
-    price: "$4.50",
+    price: 4.50,
   },
 
   {
@@ -52,7 +52,7 @@ export const CoffeeList = [
       "Strong espresso lifted by airy foam—balanced, warm, and beautifully structured.",
     popularity: 9,
     recommendedServing: "Hot, with equal milk and foam",
-    price: "$4.25",
+    price: 4.25,
   },
 
   {
@@ -63,7 +63,7 @@ export const CoffeeList = [
       "Espresso touched by chocolate, creating a soft, indulgent hug in a cup.",
     popularity: 10,
     recommendedServing: "Hot, with a swirl of chocolate",
-    price: "$5.00",
+    price: 5.00,
   },
 
   {
@@ -74,7 +74,7 @@ export const CoffeeList = [
       "A sharp espresso softened by just a drop of milk—bold at heart, gentle at the surface.",
     popularity: 8,
     recommendedServing: "Single shot with a stain of milk",
-    price: "$3.75",
+    price: 3.75,
   },
 
   {
@@ -85,7 +85,7 @@ export const CoffeeList = [
       "Silky milk blended seamlessly with espresso—rich, warm, and confidently smooth.",
     popularity: 9,
     recommendedServing: "Hot, with microfoam",
-    price: "$4.75",
+    price: 4.75,
   },
 
   {
@@ -96,6 +96,6 @@ export const CoffeeList = [
       "Espresso and milk meeting halfway—equal parts strength and softness, perfectly balanced.",
     popularity: 8,
     recommendedServing: "Small glass, warm",
-    price: "$4.00",
+    price: 4.00,
   },
 ];

@@ -151,7 +151,7 @@
    .navbar-links {
     gap: 10px; /* smaller spacing */
     flex-wrap: wrap; /* allow links to wrap if needed */
-    justify-content: flex-start; /* optional: align left */
+    justify-content: flex-start; /* optional: align left */}
  navbar-link {
     font-size: 18px;
   }

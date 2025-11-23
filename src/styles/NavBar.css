@@ -28,7 +28,7 @@
 
 /* Logo stays left */
 .navbar-logo {
-  flex-shrink: 0;  flex-shrink: 0; /* prevents shrinking */
+  flex-shrink: 0; /* prevents shrinking */
   margin-right: 24px;
   display: flex;
   align-items: center; /* align image and text by baseline */
@@ -133,7 +133,7 @@
 
 @media (max-width: 768px) {
   .navbar-links {
-    gap: 30px; /* smaller spacing */
+    gap: 27px; /* smaller spacing */
   }
   .navbar-link {
     font-size: 28px; /* reduce font */
@@ -154,11 +154,13 @@
 
 @media (max-width: 600px) {
   .navbar-links {
-    gap: 35px;
+    gap: 22px;
   }
   .navbar-link {
     font-size: 30px;
   }
+  .navbar-logo img { height: 75px; }
+
 }
 
 
@@ -177,7 +179,7 @@
     display: none;
   }
    .navbar-link {
-    font-size: 18px;
+    font-size: 16px;
        white-space: nowrap; /* prevent breaking words */
   }
 
@@ -194,10 +196,11 @@
 
      
     .navbar-logo img {
-    height: 60px; /* shrink logo */
+    height: 50px; /* shrink logo */
   }
+
   .logo-text {
-    font-size: 24px; /* shrink logo text */
+    font-size: 22px; /* shrink logo text */
   }
 }
 
@@ -205,8 +208,12 @@
   .navbar-container {
     gap: 5px; /* smaller gap */
   }
+
+
+
+   
   .navbar-logo img {
-    height: 50px;
+    height: 40px;
   }
   .logo-text {
     font-size: 20px;

@@ -42,15 +42,16 @@ https://Aleen-coder.github.io/coffee-shop
 ## Screenshots of the UI
 
 ### Home Page
-![Home](screenshots/Home.PNG)
+<img src="screenshots/Home.PNG" width="500"/>
 
 ### Menu Page
-![Menu](screenshots/Menu.PNG)
+<img src="screenshots/Menu.PNG" width="500"/>
 
 ### Cart Page
-![Cart](screenshots/Cart.PNG)
+<img src="screenshots/Cart.PNG" width="500"/>
 
 ### About Page
-![a 1](screenshots/a1.PNG)
-![a 2](screenshots/a2.PNG)
-![a 3](screenshots/a3.PNG)
+<img src="screenshots/a1.PNG" width="500"/>
+<img src="screenshots/a2.PNG" width="500"/>
+<img src="screenshots/a3.PNG" width="500"/>
+

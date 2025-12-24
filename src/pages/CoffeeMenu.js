@@ -40,15 +40,7 @@ function CoffeeMenu() {
     recommendedServing={pastry.recommendedServing}
   />
   ))}
-
-
-
-
-
-
-
-
-      </div>
+   </div>
        {/* Side Cart */}
       <Cart />
      </section>

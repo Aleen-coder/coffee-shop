@@ -167,7 +167,9 @@
 
 @media (max-width: 480px) {
   .navbar {
+
     padding: 10px 12px;
+
   }
    .navbar-links {
     gap: 8px; /* smaller spacing */
@@ -177,15 +179,11 @@
    }
    .navbar-links::-webkit-scrollbar {
     display: none;
-        gap: 8px; /* tighter spacing */
   }
    .navbar-link {
     font-size: 16px;
        white-space: nowrap; /* prevent breaking words */
   }
-
-
-  
  .navbar-container {
    padding: 12px 20px; /* reduce padding for small screens */
   display: flex;
@@ -193,9 +191,7 @@
   justify-content: space-between;
   gap: 10px; /* reduce gap on small screens */
   min-width: 0; /* allows flex items to shrink properly */
-}
-
-     
+} 
     .navbar-logo img {
     height:40px; /* shrink logo */
   }
@@ -203,17 +199,14 @@
   .logo-text {
     font-size: 20px; /* shrink logo text */
   }
-}
 
+
+}
 
  @media (max-width: 360px) {
   .navbar-container {
     gap: 5px; /* smaller gap */
   }
-
-
-
-   
   .navbar-logo img {
     height: 40px;
   }

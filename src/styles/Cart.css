@@ -26,6 +26,7 @@
   overflow-y: auto;
 }
 
+
 .cart-side-panel.open {
   right: 0;
 }
@@ -73,4 +74,24 @@
   padding: 8px 15px;
   border-radius: 6px;
   cursor: pointer;
+}
+
+
+
+
+/* Phones */
+@media (max-width: 480px) {
+  .cart-card {
+    padding: 20px;
+  }
+  .cart-card h2 {
+    font-size: 22px;
+  }
+  .cart-card p, .cart-card li {
+    font-size: 14px;
+  }
+  .cart-card button {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
 }

@@ -8,6 +8,9 @@ import img16 from "./assets/img16.jpg";
 import Footer from "./Components/Footer";
 import Cart from "./Components/Cart";
 import { CartProvider } from "./Components/CartContext";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
 function App() {
   return (
       <CartProvider>
@@ -20,7 +23,8 @@ function App() {
           <Route path="/menu" element={<CoffeeMenu />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-         
+          <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         </Routes>
 
         {/* Global Footer */}

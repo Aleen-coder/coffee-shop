@@ -20,12 +20,15 @@
   justify-content: space-between;
   max-width: 2000px; /* or 1600px for ultra-wide */
    gap: 35px; /*  space between logo and links */
-     align-items: center;
+
 }
+
+
+
 
 /* Logo stays left */
 .navbar-logo {
-  flex-shrink: 0;  flex-shrink: 0; /* prevents shrinking */
+  flex-shrink: 0; /* prevents shrinking */
   margin-right: 24px;
   display: flex;
   align-items: center; /* align image and text by baseline */
@@ -126,34 +129,108 @@
 
 
 
+
+
 @media (max-width: 768px) {
   .navbar-links {
-    gap: 50px;
+    gap: 27px; /* smaller spacing */
   }
   .navbar-link {
-    font-size: 38px;
+    font-size: 28px; /* reduce font */
+  }
+  .navbar-logo img {
+    height: 90px; /* smaller logo */
+  }
+  .logo-text {
+    font-size: 40px;
   }
 }
 
 
+
+
+
+
+
 @media (max-width: 600px) {
   .navbar-links {
-    gap: 35px;
+    gap: 22px;
   }
   .navbar-link {
     font-size: 30px;
   }
+  .navbar-logo img { height: 75px; }
+
 }
 
 
 
 @media (max-width: 480px) {
-  .navbar-links {
-    gap: 20px;
+  .navbar {
+    padding: 10px 12px;
   }
-  .navbar-link {
-    font-size: 24px;
+   .navbar-links {
+    gap: 8px; /* smaller spacing */
+    flex-wrap: nowrap; /* keep in one line */
+    overflow-x: auto;  /* allow scroll if needed */
+    -webkit-overflow-scrolling: touch;
+   }
+   .navbar-links::-webkit-scrollbar {
+    display: none;
+        gap: 8px; /* tighter spacing */
+  }
+   .navbar-link {
+    font-size: 16px;
+       white-space: nowrap; /* prevent breaking words */
+  }
+
+
+  
+ .navbar-container {
+   padding: 12px 20px; /* reduce padding for small screens */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* reduce gap on small screens */
+  min-width: 0; /* allows flex items to shrink properly */
+}
+
+     
+    .navbar-logo img {
+    height:40px; /* shrink logo */
+  }
+
+  .logo-text {
+    font-size: 20px; /* shrink logo text */
   }
 }
+
+
+ @media (max-width: 360px) {
+  .navbar-container {
+    gap: 5px; /* smaller gap */
+  }
+
+
+
+   
+  .navbar-logo img {
+    height: 40px;
+  }
+  .logo-text {
+    font-size: 20px;
+  }
+  .navbar-links {
+    gap: 5px;
+    flex-wrap: wrap; /* links move to next line if needed */
+     justify-content: flex-start; /* align left */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+   
+}
+  
+
 
 

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import img16 from "../assets/img16.jpg";
+
 import  "../styles/NavBar.css";
 
 function NavBar() {
@@ -25,6 +26,8 @@ function NavBar() {
           <Link to="/menu" className="navbar-link">Coffee Menu</Link>
           <Link to="/about" className="navbar-link">About</Link>
           <Link to="/contact" className="navbar-link">Contact</Link>
+          <Link to="/login" className="navbar-link">Login</Link>
+          <Link to="/register" className="navbar-link">Register</Link>
    
         </div>
       </div>

@@ -1,0 +1,229 @@
+/* Background + subtle bottom border */
+
+.navbar {
+  background-color: #FDF6F0;
+  border-bottom: 1px solid #E6D8C3;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+ /* padding: 48px 72px; /* taller and wider */
+  padding: 24px 48px; /* smaller vertical + horizontal padding */
+
+}
+
+/* Container: flex row, centered content */
+
+.navbar-container {
+  width: 100%;          /* full width */
+  margin: 0 auto;
+  display: flex;
+ /* align-items: center;*/
+  align-items: baseline; /* aligns text baselines */
+  justify-content: space-between;
+  max-width: 2000px; /* or 1600px for ultra-wide */
+   gap: 35px; /*  space between logo and links */
+
+}
+
+
+
+
+/* Logo stays left */
+.navbar-logo {
+  flex-shrink: 0; /* prevents shrinking */
+  margin-right: 24px;
+  display: flex;
+  align-items: center; /* align image and text by baseline */
+   gap: 19px; /* space between image and text */
+   /* gap: 16px;*/
+}
+
+
+
+
+.navbar-logo img {
+ /* height: 160px; /* larger logo */
+  width: auto;
+  border: 2px solid #6B4C3B; /* soft brown edge */
+    border-radius: 45px; /* gentle roundness */
+  background-color: #fcead7; /* warm ivory backdrop */
+  padding: 4px;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* elegant depth */
+  transition: transform 0.3s ease;
+    height: 120px; /* smaller logo */
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.03); /* subtle hover effect */
+}
+.logo-text {
+  font-family: 'Parisienne', cursive;
+  font-size: 60px; /* closer to 55px of links */
+  font-weight: 600;
+  color: #6B4C3B;
+   line-height: 1;        /* tighter line height */
+  position: relative;
+  top: 0; /* remove manual offset */
+    line-height: 1; /* normalize */
+       /* top: -8px; 
+   font-size: 70px;*/
+}
+
+
+.logo-wrapper {
+  display: flex;
+  align-items: baseline;/* center the text vertically */
+}
+
+
+/* Links centered with spacing */
+.navbar-links {
+  flex: 1; /* flex-1 */
+  display: flex;
+   justify-content: center; /* center the links */
+  gap: 100px; /* space between links  */
+   flex-wrap: nowrap; /*never wrap to next line  */
+     overflow-x: auto;        /* allow horizontal scroll if too small */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+}
+
+/* scrollbar is hidded  but still allow scrolling */
+.navbar-links::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* Link styling */
+
+ /* font-family: 'Georgia', 'Times New Roman', serif; /* elegant serif */
+.navbar-link {
+  font-family: 'Parisienne', cursive; /* or Dancing Script */
+  font-size: 55px;       /* larger text */
+ /* font-weight: 700;      more presence */
+    font-weight: 600;
+  color: #6B4C3B;  /* rich brown */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.navbar-link:hover {
+  color: #A67C52; /* lighter brown on hover */
+}
+
+/* ===== Responsive adjustments to keep links in one line ===== */
+
+
+
+/* Progressive scaling */
+@media (max-width: 1024px) {
+  .navbar-links {
+    gap: 70px; /* smaller spacing */
+  }
+  .navbar-link {
+    font-size: 45px;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .navbar-links {
+    gap: 27px; /* smaller spacing */
+  }
+  .navbar-link {
+    font-size: 28px; /* reduce font */
+  }
+  .navbar-logo img {
+    height: 90px; /* smaller logo */
+  }
+  .logo-text {
+    font-size: 40px;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .navbar-links {
+    gap: 22px;
+  }
+  .navbar-link {
+    font-size: 30px;
+  }
+  .navbar-logo img { height: 75px; }
+
+}
+
+
+
+@media (max-width: 480px) {
+  .navbar {
+
+    padding: 10px 12px;
+
+  }
+   .navbar-links {
+    gap: 8px; /* smaller spacing */
+    flex-wrap: nowrap; /* keep in one line */
+    overflow-x: auto;  /* allow scroll if needed */
+    -webkit-overflow-scrolling: touch;
+   }
+   .navbar-links::-webkit-scrollbar {
+    display: none;
+  }
+   .navbar-link {
+    font-size: 16px;
+       white-space: nowrap; /* prevent breaking words */
+  }
+ .navbar-container {
+   padding: 12px 20px; /* reduce padding for small screens */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* reduce gap on small screens */
+  min-width: 0; /* allows flex items to shrink properly */
+} 
+    .navbar-logo img {
+    height:40px; /* shrink logo */
+  }
+
+  .logo-text {
+    font-size: 20px; /* shrink logo text */
+  }
+
+
+}
+
+ @media (max-width: 360px) {
+  .navbar-container {
+    gap: 5px; /* smaller gap */
+  }
+  .navbar-logo img {
+    height: 40px;
+  }
+  .logo-text {
+    font-size: 20px;
+  }
+  .navbar-links {
+    gap: 5px;
+    flex-wrap: wrap; /* links move to next line if needed */
+     justify-content: flex-start; /* align left */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+   
+}
+  
+
+
+

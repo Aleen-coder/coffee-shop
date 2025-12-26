@@ -1,0 +1,27 @@
+.footer {
+padding: 25px 15px;
+  margin-top: auto;/* pushes footer to bottom */
+ text-align: center;
+ border-top: 1px solid #e6d8c9;    /* thin soft line */
+/* font-family: "Poppins", sans-serif;*/
+    background-color: #FDF6F0;    /* warm cream */
+  font-size: 16px;              /* slightly larger text */
+font-weight: 500;             /* medium weight for elegance */
+ font-family: 'Playfair Display', serif; /* elegant font */
+ letter-spacing: 0.5px;        /* adds airy spacing */
+ box-shadow: 0 -2px 6px rgba(0,0,0,0.05); /* soft shadow above */
+}
+
+.footer-content {
+   color:  #4A3C2A;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.footer-copy {
+  color:  #4A3C2A;
+  margin-top: 15px;
+  font-size: 40px;
+  opacity: 0.7;
+}

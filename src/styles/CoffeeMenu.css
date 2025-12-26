@@ -1,0 +1,32 @@
+/* CoffeeMenu.css or CoffeeCard.css */
+
+.menuContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* center cards */
+}
+
+/* Responsive: tablets */
+@media (max-width: 768px) {
+  .menuContainer {
+    gap: 15px; /* smaller spacing on tablets */
+  }
+}
+
+/* Small phones: stack cards vertically */
+@media (max-width: 480px) {
+  .menuContainer {
+    flex-direction: column; /* stack cards */
+    align-items: center;    /* center cards */
+    gap: 15px;
+  }
+}
+
+/* Optional: make cards wider on small screens */
+@media (max-width: 480px) {
+  .coffee-card {
+    width: 90%;   /* or 95% */
+    margin: 0 auto; /* center each card */
+  }
+}

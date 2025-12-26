@@ -1,0 +1,133 @@
+.auth-container {
+  min-height: 100vh;
+ /* background: linear-gradient(135deg, #f3e9dd, #e2c7a7, #d4a574);*/
+ background: linear-gradient(135deg, #fffaf4, #f9f3ec, #f3e9dd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 25px;
+  font-family: "Playfair Display", serif;
+  color: #3b2f2a;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 500px;
+  background: #fffaf4;
+  border-radius: 28px;
+  padding: 45px 40px;
+  border: 2px solid rgba(118, 84, 54, 0.15);
+  box-shadow:
+    0px 10px 30px rgba(0, 0, 0, 0.15),
+    0px 0px 20px rgba(222, 175, 130, 0.25),
+    inset 0px 0px 25px rgba(255, 255, 255, 0.6);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+
+
+
+.auth-title {
+  text-align: center;
+  font-family: 'Parisienne', cursive;
+  font-size: 44px;
+  font-weight: 700;
+  color: #5a3d2b;
+  margin-bottom: 35px;
+}
+
+.form-field {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #5a3d2b;
+  font-weight: 600;
+}
+
+.form-field input {
+  padding: 15px 16px;
+  border-radius: 16px;
+  background: #fff4e8;
+  border: 1px solid #cfb79f;
+  font-size: 17px;
+  color: #4c3a31;
+  transition: 0.3s;
+}
+
+.form-field input:focus {
+  border-color: #b28863;
+  background-color: #fff8f1;
+  box-shadow: 0 0 10px rgba(178, 136, 99, 0.4);
+}
+
+.auth-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #c48a54, #b16f43, #8e5832);
+  border: none;
+  padding: 18px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0px 8px 18px rgba(138, 96, 62, 0.3);
+}
+/* ===== Responsive adjustments ===== */
+
+/* Tablets: 768px and below */
+@media (max-width: 768px) {
+  .auth-card {
+    padding: 30px 25px;
+  }
+  .auth-title {
+    font-size: 32px;
+  }
+  .form-field label {
+    font-size: 16px;
+  }
+  .form-field input {
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+  .auth-btn {
+    font-size: 18px;
+    padding: 14px 0;
+  }
+}
+
+/* Phones: 480px and below (Galaxy A13 size) */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 20px 15px;
+  }
+  .auth-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .auth-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .form-field label {
+    font-size: 14px;
+  }
+  .form-field input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .auth-btn {
+    font-size: 16px;
+    padding: 12px 0;
+    border-radius: 12px;
+  }
+}

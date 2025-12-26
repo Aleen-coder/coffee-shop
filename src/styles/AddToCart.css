@@ -1,0 +1,22 @@
+.add-to-cart-btn {
+  display: block;
+  width: 90%;
+  margin: 10px auto 0;
+  padding: 10px 15px;
+  background-color: #6B4C3B; /* coffee brown */
+  color: #FDF6F0;           /* cream */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+
+.add-to-cart-btn:hover {
+  background-color: #8B6A58; /* lighter brown on hover */
+}
+.add-to-cart-btn.clicked {
+  transform: scale(0.95);  /* slight shrink effect */
+  background-color: #3e2f22; /* darker shade on click */
+}

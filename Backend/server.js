@@ -20,11 +20,13 @@ app.use(express.json());
 
 db.connect((err) => {
   if (err) {
-    console.error("MySQL connection error:", err.message);
+    console.error("MySQL connection error:", err);
   } else {
     console.log("Connected to MySQL database");
   }
 });
+
+
 
 
 

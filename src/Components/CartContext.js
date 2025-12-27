@@ -9,18 +9,7 @@ export const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const userId = 1; // TODO: replace with logged-in user ID
-  /*const addToCart = (item) => {
-    const existing = cartItems.find((i) => i.name === item.name);
-    if (existing) {
-      setCartItems(
-        cartItems.map((i) =>
-          i.name === item.name ? { ...i, quantity: i.quantity + 1 } : i
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
-    }
-  };*/
+
     // Load cart from backend when component mounts
     useEffect(() => {
       const fetchCart = async () => {
@@ -36,35 +25,39 @@ export function CartProvider({ children }) {
 
   // Add item to cart
   const addToCart = async (item) => {
+    console.log("Sending to backend:",{
+  user_id: userId,
+       product_id: item.id,
+      quantity: 1,
+      name: item.name,
+      price: item.price, 
+      image_url: item.image_url,
+ 
+    });  
     await axios.post("http://localhost:5000/cart", {
       user_id: userId,
-      product_id: item.id,
-      quantity: 1
+       product_id: item.id,
+      quantity: 1,
+       name: item.name,
+      price: item.price, 
+      image_url: item.image_url,
+ 
     });
+
      // refresh cart
     const res = await axios.get(`http://localhost:5000/cart/${userId}`);
     setCartItems(res.data);
   };
 
 
-
-  /*const removeFromCart = (itemName) => {
-    setCartItems(cartItems.filter((i) => i.name !== itemName));
-  };*/
-
     // Remove item from cart
   const removeFromCart = async (cartItemId) => {
     await axios.delete(`http://localhost:5000/cart/${cartItemId}`);
-    setCartItems(cartItems.filter(i => i.id !== cartItemId));
+    setCartItems(cartItems.filter(i => i.id!== cartItemId));
   };
 
 
- /* const clearCart = () => setCartItems([]);
-
-  const totalPrice = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );*/
+ 
 
    const clearCart = async () => {
     // optional: loop through items and delete each

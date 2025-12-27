@@ -14,7 +14,9 @@ function CoffeeMenu() {
     <div className="menuContainer" style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
       {CoffeeList.map((coffee, index) => (
         <CoffeeCard
-          key={index}
+      
+         key={coffee.id}
+          id={coffee.id}   
           image={coffee.image}
           name={coffee.name}
           origin={coffee.origin}

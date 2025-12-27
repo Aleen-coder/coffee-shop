@@ -4,7 +4,7 @@
   background-color: #FDF6F0;
   border-bottom: 1px solid #E6D8C3;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
- /* padding: 48px 72px; /* taller and wider */
+   padding-left: 10px;
   padding: 24px 48px; /* smaller vertical + horizontal padding */
 
 }
@@ -29,11 +29,11 @@
 /* Logo stays left */
 .navbar-logo {
   flex-shrink: 0; /* prevents shrinking */
-  margin-right: 24px;
+  margin-right: 12px;
   display: flex;
   align-items: center; /* align image and text by baseline */
-   gap: 19px; /* space between image and text */
-   /* gap: 16px;*/
+   gap: 12px; /* space between image and text */
+   
 }
 
 
@@ -173,16 +173,17 @@
   }
    .navbar-links {
     gap: 8px; /* smaller spacing */
-    flex-wrap: nowrap; /* keep in one line */
-    overflow-x: auto;  /* allow scroll if needed */
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap; /* 👈 allow wrapping */ 
+    justify-content: center; /* 👈 center them on multiple lines */ 
+    overflow-x: visible; /* 👈 no horizontal scroll */
+
    }
    .navbar-links::-webkit-scrollbar {
     display: none;
   }
    .navbar-link {
     font-size: 16px;
-       white-space: nowrap; /* prevent breaking words */
+       white-space: normal; /* allow breaking/wrapping */
   }
  .navbar-container {
    padding: 12px 20px; /* reduce padding for small screens */
@@ -216,9 +217,8 @@
   .navbar-links {
     gap: 5px;
     flex-wrap: wrap; /* links move to next line if needed */
-     justify-content: flex-start; /* align left */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    justify-content: center; /* 👈 center instead of flex-start */
+     overflow-x: visible;
   }
 
    

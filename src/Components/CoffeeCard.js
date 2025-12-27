@@ -5,10 +5,9 @@ import "../styles/CoffeeCard.css"; // make sure you create this CSS file
 import AddToCart from "./AddToCart.js";
 
 
-function CoffeeCard({ image, name, origin, description, popularity, recommendedServing, price }) {
+function CoffeeCard({id, image, name, origin, description, popularity, recommended_serving, price }) {
    // Define the coffee object here
-
-   const coffee = { image, name, origin, description, popularity, recommendedServing, price };
+   const coffee = {id, image, name, origin, description, popularity, recommended_serving, price };
 
   return (
     <div className="coffee-card">
@@ -16,7 +15,7 @@ function CoffeeCard({ image, name, origin, description, popularity, recommendedS
       <h3 className="coffee-name">{name}</h3>
       <p className="coffee-origin">Origin: {origin}</p>
       <p className="coffee-description">{description}</p>
-      <p className="coffee-serving">Serving: {recommendedServing}</p>
+      <p className="coffee-serving">Serving: {recommended_serving}</p>
       <p className="coffee-popularity">Popularity: {popularity}</p>
       <p className="coffee-price">${price.toFixed(2)}</p>
           {/* Pass the coffee object to AddToCart */}

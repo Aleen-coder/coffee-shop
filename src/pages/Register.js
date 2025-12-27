@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Auth.css";
+import api from "../api";
 
 function Register() {
   const [name, setName] = useState("");

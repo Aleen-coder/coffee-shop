@@ -1,7 +1,8 @@
 import express from "express";
-import mysql from "mysql";
+//import mysql from "mysql";
 import cors from "cors";
 // import multer from "multer";
+import mysql from "mysql2";
 
 const app = express();
 app.use(cors());

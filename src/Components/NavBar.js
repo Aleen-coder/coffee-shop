@@ -4,11 +4,9 @@ import img16 from "../assets/img16.jpg";
 import  "../styles/NavBar.css";
 
 function NavBar() {
+  const role = localStorage.getItem("userRole"); //  get role from login
   return (
-
-
     <nav className="navbar">
-
       <div className="navbar-container">
         
         {/* Logo on the left */}
@@ -28,7 +26,9 @@ function NavBar() {
           <Link to="/contact" className="navbar-link">Contact</Link>
           <Link to="/login" className="navbar-link">Login</Link>
           <Link to="/register" className="navbar-link">Register</Link>
-   
+  {/* Only show if role is admin */}
+  {role === "admin" &&
+   ( <Link to="/adminDashboard" className="navbar-link">Admin Dashboard</Link> )}
         </div>
       </div>
     </nav>

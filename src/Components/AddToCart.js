@@ -10,6 +10,7 @@ function AddToCart({ coffee }) {
   const [clicked, setClicked] = useState(false);
   
   const handleClick = () => {
+    console.log("Coffee object:", coffee);
     addToCart(coffee);
     setClicked(true);
     setTimeout(() => setClicked(false), 300); // reset after 300ms

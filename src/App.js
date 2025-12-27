@@ -10,21 +10,29 @@ import Cart from "./Components/Cart";
 import { CartProvider } from "./Components/CartContext";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import AdminDashboard from "./pages/AdminDashboard";
+import ProfileIcon from "./Components/ProfileIcon";
 
 function App() {
+  const userId = localStorage.getItem("userId");
   return (
       <CartProvider>
     <Router>
       <div className="app-container">
         <NavBar />
+
+          {/* Show profile icon only if logged in */}
+          {userId && <ProfileIcon />}
          <Cart /> {/* <-- always visible toggle cart on all pages */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<CoffeeMenu />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/adminDashboard" element={<AdminDashboard />} />
           <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
         </Routes>
 
         {/* Global Footer */}

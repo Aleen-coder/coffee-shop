@@ -11,13 +11,23 @@ function Register() {
     e.preventDefault();
     try {
       const res = await axios.post("http://localhost:5000/register", { name, email, password });
-      alert("Registration successful!");
-      localStorage.setItem("userId", res.data.user.id);
-    } catch (err) {
-      alert("Error registering user");
-    }
-  };
+// Save user info
+ localStorage.setItem("userId", res.data.userId);// backend returns userId
+ localStorage.setItem("userRole", "customer"); // default role
+ localStorage.setItem("userName", name); 
 
+ // Personalized welcome story
+ 
+alert(`Welcome aboard, ${name}! 🎉 You’ve registered successfully. Your journey with our coffee shop starts now — enjoy exploring, adding to your cart, and making it yours!`); 
+
+// Redirect new users to menu
+ window.location.href = "/coffeeMenu";
+    }catch (err) { 
+      alert(err.response?.data?.error || "Error registering user");
+
+ } 
+
+};
   return (
     <div className="auth-container">
       <div className="auth-card">

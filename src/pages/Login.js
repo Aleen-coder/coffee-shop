@@ -9,10 +9,24 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", { email, password });
-      alert("Login successful!");
-      localStorage.setItem("userId", res.data.user.id);
-    } catch (err) {
+      const res = await axios.post("http://localhost:5000/login", { email,  password });
+      const user = res.data.user;
+      // Save user info 
+       localStorage.setItem("userId", user.id);
+         localStorage.setItem("userName", user.name);
+         localStorage.setItem("userRole", user.role); //save role 
+         // Show personalized welcome
+      alert(`Welcome back, ${user.name}!`);
+
+// Redirect based on role
+ if (user.role === "admin") {
+ window.location.href = "/adminDashboard"; 
+} 
+else{
+  window.location.href = "/coffeeMenu"; // or "/cart" if you prefer }
+   }
+
+ } catch (err) {
       alert("Invalid credentials");
     }
   };

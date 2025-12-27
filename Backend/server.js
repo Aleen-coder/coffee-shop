@@ -6,16 +6,13 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/assets", express.static("assets"));
 
 // Create MySQL connection
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "coffee-shop",
-});
-
+const db = mysql.createConnection({ 
+  host: "maglev.proxy.rlwy.net", 
+  port: 14900, user: "root",
+   password: "xCWBPRcayyEjjkzDvWgrvRcvMjxXxFeH", 
+   database: "railway", });
 // Test connection
 db.connect((err) => {
   if (err) {
@@ -24,6 +21,13 @@ db.connect((err) => {
     console.log("Connected to coffee_shop database");
   }
 });
+app.get("/test-db", (req, res) => { 
+  db.query("SELECT * FROM users LIMIT 1", (err, result) => {
+     if (err) {
+       return res.status(500).send("DB connection failed: " + err.message);
+       } res.send("DB connected! First user: " + JSON.stringify(result[0]));
+       }); 
+      });
 
 // =========================
 // Products API

@@ -8,19 +8,26 @@ app.use(cors());
 app.use(express.json());
 
 // Create MySQL connection
-const db = mysql.createConnection({ 
-  host: "maglev.proxy.rlwy.net", 
-  port: 14900, user: "root",
-   password: "xCWBPRcayyEjjkzDvWgrvRcvMjxXxFeH", 
-   database: "railway", });
+   const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+});
+
 // Test connection
+
 db.connect((err) => {
   if (err) {
-    console.error("MySQL connection error:", err);
+    console.error("MySQL connection error:", err.message);
   } else {
-    console.log("Connected to coffee_shop database");
+    console.log("Connected to MySQL database");
   }
 });
+
+
+
 app.get("/test-db", (req, res) => { 
   db.query("SELECT * FROM users LIMIT 1", (err, result) => {
      if (err) {

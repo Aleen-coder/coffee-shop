@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import BackgroundChanger from "../Components/BackgroundChanger.js";
-import "../styles/Home.css"; // ✅ import the CSS file
+import "../styles/Home.css";
 // Import images from src/images
 import bg1 from "../images/bg1.jpg";
 import bg2 from "../images/bg2.jpg";
@@ -29,7 +29,7 @@ function Home() {
             </Link>
           </div>
         </div>
-      </div> {/* ✅ close home-container */}
+      </div> {/* close home-container */}
     </BackgroundChanger>
   );
 }

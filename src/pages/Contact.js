@@ -1,7 +1,8 @@
 import "../styles/Contact.css";
-import axios from "axios"; 
+//import axios from "axios"; 
 import React, { useState, useEffect } from "react";
 
+import api from "../api"; 
 function Contact() {
   const [name, setName] = useState(""); 
   const [email, setEmail] = useState("");
@@ -28,7 +29,7 @@ const timer = setTimeout(() => setStatus(""), 5000);
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/contact", {
+      const res = await api.post("/contact", {
         user_id: userId,
         name,
         email,

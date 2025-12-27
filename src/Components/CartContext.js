@@ -1,9 +1,9 @@
 /*CartContext → stores the items, handles quantity, removal, total price. */
 
 import React, { createContext, useState, useEffect } from "react";
+import api from "../api"; // use our axios instance
 
-
-import axios from "axios";
+//import axios from "axios";
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
@@ -14,7 +14,7 @@ export function CartProvider({ children }) {
     useEffect(() => {
       const fetchCart = async () => {
         try {
-          const res = await axios.get(`http://localhost:5000/cart/${userId}`);
+          const res = await api.get(`/cart/${userId}`);
           setCartItems(res.data);
         } catch (err) {
           console.error("Error loading cart:", err);
@@ -34,41 +34,32 @@ export function CartProvider({ children }) {
       image_url: item.image_url,
  
     });  
-    await axios.post("http://localhost:5000/cart", {
-      user_id: userId,
-       product_id: item.id,
-      quantity: 1,
-       name: item.name,
-      price: item.price, 
-      image_url: item.image_url,
- 
-    });
+  
+await api.post("/cart", { 
+  user_id: userId, 
+  product_id: item.id, quantity: 1, 
+  name: item.name,
+   price: item.price, 
+   image_url: item.image_url, });
 
-     // refresh cart
-    const res = await axios.get(`http://localhost:5000/cart/${userId}`);
-    setCartItems(res.data);
-  };
+  
+   // refresh cart
+    const res = await api.get(`/cart/${userId}`); 
+    setCartItems(res.data); };
 
+     // Remove item from cart 
+     const removeFromCart = async (cartItemId) => {
+     await api.delete(`/cart/${cartItemId}`);
+     setCartItems(cartItems.filter((i) => i.id !== cartItemId)); };
 
-    // Remove item from cart
-  const removeFromCart = async (cartItemId) => {
-    await axios.delete(`http://localhost:5000/cart/${cartItemId}`);
-    setCartItems(cartItems.filter(i => i.id!== cartItemId));
-  };
-
-
- 
-
+   // Clear cart
    const clearCart = async () => {
-    // optional: loop through items and delete each
-    for (const item of cartItems) {
-      await axios.delete(`http://localhost:5000/cart/${item.id}`);
-    }
-    setCartItems([]);
-  };
+   for (const item of cartItems) {
+    await api.delete(`/cart/${item.id}`);
+    } 
+    setCartItems([]); };
 
 
- 
   // Calculate total
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,

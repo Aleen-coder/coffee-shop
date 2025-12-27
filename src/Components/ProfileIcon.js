@@ -1,7 +1,8 @@
 
-import axios from "axios";
+//import axios from "axios";
 import "../styles/ProfileIcon.css"; // new CSS file
 import React, { useState } from "react";
+import api from "../api";
 
 function ProfileIcon() {
   const userName = localStorage.getItem("userName");
@@ -11,7 +12,8 @@ const [isOpen, setIsOpen] = useState(false);
 
   const handleLogout = async () => {
     try {
-      await axios.delete(`http://localhost:5000/users/${userId}`);
+
+      await api.delete(`/users/${userId}`); 
       localStorage.clear();
       alert("You have been logged out and your account deleted.");
       window.location.href = "/login";

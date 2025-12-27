@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
-import "../styles/Auth.css"; // new CSS file for login/register
+//import axios from "axios";
+import "../styles/Auth.css"; 
+import api from "../api";
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -9,7 +11,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", { email,  password });
+      const res = await api.post("/login", { email, password });
       const user = res.data.user;
       // Save user info 
        localStorage.setItem("userId", user.id);

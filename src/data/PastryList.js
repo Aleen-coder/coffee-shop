@@ -1,7 +1,9 @@
 // pastryList.js
 
 import almondCroissant from "../images/almondCroissant.jpg";
-import BlueBerryMuffin from "../images/BlueBerryMuffin.jpg";
+import BlueberryMuffin from "../images/BlueberryMuffin.jpg";
+
+
 import chocolatecroissant from "../images/chocolatecroissant.jpg";
 import  CinnamonRoll from "../images/CinnamonRoll.jpg";
 import Eclair from "../images/Eclair.jpg";
@@ -54,7 +56,7 @@ export const PastryList = [
     name: "Blueberry Muffin",
     description: "Moist muffin bursting with fresh blueberries",
     price: 2.75,
-    image: BlueBerryMuffin,
+    image: BlueberryMuffin,
        origin: "USA",
     popularity: "Medium",
     recommended_serving: "Morning Snack"

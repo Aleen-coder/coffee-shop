@@ -1,27 +1,29 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+//import axios from "axios";
 import "../styles/AdminDashboard.css";
-
+import api from "../api";
 
 function AdminDashboard() {
   const [users, setUsers] = useState([]);
   const [orders, setOrders] = useState([]);
   const [messages, setMessages] = useState([]); 
   const [userHistory, setUserHistory] = useState([]);
-const [selectedUser, setSelectedUser] = useState(null);
+  const [selectedUser, setSelectedUser] = useState(null);
 
   const adminId = localStorage.getItem("userId"); // must be an admin
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/admin/users/${adminId}`)
+    api.get(`/admin/users/${adminId}`)
       .then(res => setUsers(res.data))
       .catch(err => console.error(err));
 
-    axios.get(`http://localhost:5000/admin/orders/${adminId}`)
+ 
+    api.get(`/admin/orders/${adminId}`)
       .then(res => setOrders(res.data))
       .catch(err => console.error(err));
 
-axios.get(`http://localhost:5000/admin/messages/${adminId}`) // fetch messages 
+
+      api.get(`/admin/messages/${adminId}`)// fetch messages 
     .then(res => setMessages(res.data))
     .catch(err => console.error(err));
 
@@ -30,7 +32,7 @@ axios.get(`http://localhost:5000/admin/messages/${adminId}`) // fetch messages
 
   const updateOrderStatus = async (orderId, status) => {
     try {
-      await axios.put(`http://localhost:5000/admin/orders/${adminId}/${orderId}`, { status });
+      await api.put(`/admin/orders/${adminId}/${orderId}`, { status });
       alert("Order status updated!");
       setOrders(orders.map(o => o.id === orderId ? { ...o, status } : o));
     } catch (err) {
@@ -39,7 +41,7 @@ axios.get(`http://localhost:5000/admin/messages/${adminId}`) // fetch messages
   };
   const deleteOrder = async (orderId) => {
   try {
-    await axios.delete(`http://localhost:5000/admin/orders/${adminId}/${orderId}`);
+    await api.delete(`/admin/orders/${adminId}/${orderId}`);
     alert("Order deleted!");
     setOrders(orders.filter(o => o.id !== orderId));
   } catch (err) {
@@ -49,7 +51,7 @@ axios.get(`http://localhost:5000/admin/messages/${adminId}`) // fetch messages
 
 const deleteMessage = async (messageId) => {
   try {
-    await axios.delete(`http://localhost:5000/admin/messages/${adminId}/${messageId}`);
+    await api.delete(`/admin/messages/${adminId}/${messageId}`);
     alert("Message deleted!");
     setMessages(messages.filter(m => m.id !== messageId));
   } catch (err) {
@@ -59,7 +61,7 @@ const deleteMessage = async (messageId) => {
 //fetch history
 const viewUserHistory = async (userId) => {
   try {
-    const res = await axios.get(`http://localhost:5000/admin/user-orders/${adminId}/${userId}`);
+    const res = await api.get(`/admin/user-orders/${adminId}/${userId}`);
     setUserHistory(res.data);
     setSelectedUser(userId);
   } catch (err) {

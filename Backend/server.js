@@ -399,12 +399,11 @@ app.post("/contact", (req, res) => {
   });
 });
 
-
-
 // =========================
-// Start server
-// =========================
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server started running on http://localhost:${PORT}`);
+//  // Start server //
+//  ========================= 
+const PORT = process.env.PORT || 5000;
+ //  Railway's PORT 
+  app.listen(PORT, () => { 
+ console.log(`Server started running on port ${PORT}`); 
 });

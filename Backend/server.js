@@ -1,29 +1,43 @@
 import express from "express";
-import mysql from "mysql";
+//import mysql from "mysql";
 import cors from "cors";
 // import multer from "multer";
+import mysql from "mysql2";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/assets", express.static("assets"));
 
 // Create MySQL connection
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "coffee-shop",
+   const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
 // Test connection
+
 db.connect((err) => {
   if (err) {
     console.error("MySQL connection error:", err);
   } else {
-    console.log("Connected to coffee_shop database");
+    console.log("Connected to MySQL database");
   }
 });
+
+
+
+
+
+app.get("/test-db", (req, res) => { 
+  db.query("SELECT * FROM users LIMIT 1", (err, result) => {
+     if (err) {
+       return res.status(500).send("DB connection failed: " + err.message);
+       } res.send("DB connected! First user: " + JSON.stringify(result[0]));
+       }); 
+      });
 
 // =========================
 // Products API
@@ -385,12 +399,11 @@ app.post("/contact", (req, res) => {
   });
 });
 
-
-
 // =========================
-// Start server
-// =========================
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server started running on http://localhost:${PORT}`);
+//  // Start server //
+//  ========================= 
+const PORT = process.env.PORT || 5000;
+ //  Railway's PORT 
+  app.listen(PORT, () => { 
+ console.log(`Server started running on port ${PORT}`); 
 });

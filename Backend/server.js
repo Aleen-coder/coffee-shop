@@ -3,11 +3,15 @@ import cors from "cors";
 import mysql from "mysql2";
 import db from "./db.js";
 const app = express();
-app.use(cors());
+
 app.use(cors({
   origin: "https://coffee-shop-tau.vercel.app", 
    credentials: true }));
 
+   
+app.options("*", cors({ 
+  origin: "https://coffee-shop-tau.vercel.app",
+   credentials: true }));
 app.use(express.json());
 
 

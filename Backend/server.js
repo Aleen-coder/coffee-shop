@@ -6,6 +6,7 @@ const app = express();
 
 app.use(cors({
   origin: "https://coffee-shop-tau.vercel.app", 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
    credentials: true }));
 
 

@@ -24,7 +24,8 @@ alert(`Welcome aboard, ${name}! 🎉 You’ve registered successfully. Your jour
 // Redirect new users to menu
  window.location.href = "/coffeeMenu";
     }catch (err) { 
-      alert(err.response?.data?.error || "Error registering user");
+      console.error("Register error:", err.response?.data || err.message);
+       alert(err.response?.data?.error || "Error registering user");
 
  } 
 

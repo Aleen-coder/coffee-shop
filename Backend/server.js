@@ -11,12 +11,6 @@ app.use(cors({
 
 
 
-app.options("/*", cors({ 
-  origin: "https://coffee-shop-tau.vercel.app",
-   credentials: true }));
-
-
-
 // Test connection
 
 db.connect((err) => {

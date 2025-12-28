@@ -3,7 +3,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import api from "../api"; // use our axios instance
 
-//import axios from "axios";
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
@@ -15,7 +14,7 @@ export function CartProvider({ children }) {
       const fetchCart = async () => {
         try {
           const res = await api.get(`/cart/${userId}`);
-          setCartItems(res.data);
+          setCartItems(res.data.cartItems || []);
         } catch (err) {
           console.error("Error loading cart:", err);
         }
@@ -45,12 +44,15 @@ await api.post("/cart", {
   
    // refresh cart
     const res = await api.get(`/cart/${userId}`); 
-    setCartItems(res.data); };
+  setCartItems(res.data.cartItems || []);
+  };
 
      // Remove item from cart 
      const removeFromCart = async (cartItemId) => {
      await api.delete(`/cart/${cartItemId}`);
-     setCartItems(cartItems.filter((i) => i.id !== cartItemId)); };
+     setCartItems(cartItems.filter((i) => i.id !== cartItemId));
+
+    };
 
    // Clear cart
    const clearCart = async () => {
@@ -69,7 +71,7 @@ await api.post("/cart", {
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart, totalPrice }}
+      value={{ cartItems, setCartItems, addToCart, removeFromCart, clearCart, totalPrice }}
     >
       {children}
     </CartContext.Provider>

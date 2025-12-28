@@ -2,7 +2,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import "../styles/Cart.css";
 import { CartContext } from "./CartContext";
-import axios from "axios";
 import api from "../api"; // use our axios instance
 
 function Cart() {
@@ -15,8 +14,8 @@ useEffect(() => {
   {
    
      api.get(`/cart/${userId}`) 
-     .then(res => setCartItems(res.data)) 
-     .catch(err => console.error("Failed to fetch cart:", err));
+    .then(res => setCartItems(res.data.cartItems || [])) 
+    .catch(err => console.error("Failed to fetch cart:", err));
  } 
  else { // clear cart if not logged in
   setCartItems([]); }

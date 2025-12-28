@@ -1,24 +1,16 @@
 import express from "express";
-//import mysql from "mysql";
 import cors from "cors";
-// import multer from "multer";
 import mysql from "mysql2";
-
+import db from "./db.js";
 const app = express();
 app.use(cors());
 app.use(cors({
   origin: "https://coffee-shop-tau.vercel.app", 
    credentials: true }));
+
 app.use(express.json());
 
-// Create MySQL connection
-   const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-});
+
 
 // Test connection
 
@@ -29,9 +21,6 @@ db.connect((err) => {
     console.log("Connected to MySQL database");
   }
 });
-
-
-
 
 
 app.get("/test-db", (req, res) => { 

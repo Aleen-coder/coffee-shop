@@ -8,11 +8,12 @@ app.use(cors({
   origin: "https://coffee-shop-tau.vercel.app", 
    credentials: true }));
 
-   
-app.options("*", cors({ 
+
+
+
+app.options("/*", cors({ 
   origin: "https://coffee-shop-tau.vercel.app",
    credentials: true }));
-app.use(express.json());
 
 
 

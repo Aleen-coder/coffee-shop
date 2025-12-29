@@ -27,6 +27,7 @@ The goal is to combine technical robustness with French-inspired design elegance
 ## Clone the repository
 git clone https://github.com/Aleen-coder/coffee-shop.git
 
+
 ## Frontend Setup (React)
 
 ### Navigate into the project folder
@@ -38,6 +39,7 @@ npm install
 
 ### Local development:
 Create .env.local in the frontend folder:
+.env.local:
 REACT_APP_API_URL=http://localhost:5000
 
 ### Run the app locally
@@ -56,8 +58,9 @@ https://Aleen-coder.github.io/coffee-shop
 
 
 ## Backend Setup (Express + MySQL)
-
+### Navigate into the project folder
 cd Backend
+### Install dependencies
 npm install
 
 ### Local development:
@@ -71,15 +74,29 @@ MYSQLPASSWORD=
 
 ### Run:
 npm start
+Backend runs at: http://localhost:5000
+
 ## Production (Railway):
 Set environment variables in Railway dashboard:
-
-env
 MYSQLDATABASE=railway
 MYSQLHOST=metro.proxy.rlwy.net
 MYSQLPORT=14527
 MYSQLUSER=root
 MYSQLPASSWORD=cfEDGeFkDkpnMLCdEYBExtfRPcAMtVKA
+
+## Web Project/
+  Backend/
+    server.js
+    db.js
+    package.json
+    .env        # Railway DB credentials
+    .env.local  # Local phpMyAdmin DB credentials
+  coffee-shop/
+    src/
+    package.json
+    .env        # Production API URL (Vercel)
+    .env.local  # Local API URL
+
 
 ## Screenshots of the UI
 

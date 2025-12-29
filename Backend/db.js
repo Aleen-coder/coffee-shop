@@ -10,12 +10,6 @@ const db = mysql.createConnection({
   database: process.env.MYSQLDATABASE // Provided by Railway (currently "railway")
 });
 
-db.connect((err) => {
-  if (err) {
-    console.error("MySQL connection error:", err);
-  } else {
-    console.log("Connected to Railway MySQL database");
-  }
-});
+
 
 export default db;

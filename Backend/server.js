@@ -8,7 +8,7 @@ import db from "./db.js";//  MySQL connection
 const app = express();
 // Enable CORS for your Vercel frontend
 app.use(cors({
-  origin: "https://coffee-shop-tau.vercel.app", 
+  origin:"https://coffee-shop-tau.vercel.app",
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
    credentials: true
    }));
@@ -24,14 +24,31 @@ db.connect((err) => {
   }
 });
 
+
+
+      app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
+
+
 // Enable CORS for your Vercel frontend
-app.get("/test-db", (req, res) => { 
-  db.query("SELECT * FROM users LIMIT 1", (err, result) => {
-     if (err) {
-       return res.status(500).send("DB connection failed: " + err.message);
-       } res.send("DB connected! First user: " + JSON.stringify(result[0]));
-       }); 
-      });
+
+app.get("/test-db", async (req, res) => {
+  try {
+    db.query("SELECT * FROM users LIMIT 1", (err, result) => {
+      if (err) {
+        console.error("DB query error:", err);
+        return res.status(500).send("DB connection failed: " + err.message);
+      }
+      res.send("DB connected! First user: " + JSON.stringify(result[0]));
+    });
+  } catch (error) {
+    console.error("Route error:", error);
+    res.status(500).send("Server error: " + error.message);
+  }
+});
+
+
 
 // =========================
 // Products API

@@ -101,29 +101,29 @@ MYSQLPASSWORD=cfEDGeFkDkpnMLCdEYBExtfRPcAMtVKA
 ## Screenshots of the UI
 
 ### Home Page
-<img src="screenshots/Home.PNG" width="500"/>
+<img src="screenshots/Home.PNG" width="600"/>
 
 ### Menu Page
 <img src="screenshots/Menu.PNG" width="500" style="margin-bottom: -10px;"/>
-<img src="screenshots/PastryMenu.PNG" width="500" style="margin-bottom: -10px;"/>
+<img src="screenshots/PastryMenu.PNG" width="600" style="margin-bottom: -10px;"/>
 
 ### Cart Page
 <img src="screenshots/Cart.PNG" width="500"/>
 
 
 ### About Page
-<img src="screenshots/a1.PNG" width="500" style="margin-bottom: -10px;"/>
-<img src="screenshots/a2.PNG" width="500" style="margin-bottom: -10px;"/>
-<img src="screenshots/a3.PNG" width="500"/>
+<img src="screenshots/a1.PNG" width="600" style="margin-bottom: -10px;"/>
+<img src="screenshots/a2.PNG" width="600" style="margin-bottom: -10px;"/>
+<img src="screenshots/a3.PNG" width="600"/>
 
 ### Contact Page
-<img src="screenshots/Contact1.PNG" width="500" style="margin-bottom: -10px;"/>
-<img src="screenshots/Contact2.PNG" width="500" style="margin-bottom: -10px;"/>
+<img src="screenshots/Contact1.PNG" width="600" style="margin-bottom: -10px;"/>
+<img src="screenshots/Contact2.PNG" width="600" style="margin-bottom: -10px;"/>
 
 ### Login Page
-<img src="screenshots/Login.PNG" width="500"/>
+<img src="screenshots/Login.PNG" width="400"/>
 
 ### Register Page
-<img src="screenshots/Register.PNG" width="500"/>
+<img src="screenshots/Register.PNG" width="400"/>
 
 

@@ -24,23 +24,23 @@ The goal is to combine technical robustness with French-inspired design elegance
 - Git installed for cloning the repository
 ---
 
-# Clone the repository
+## Clone the repository
 git clone https://github.com/Aleen-coder/coffee-shop.git
 
-### Frontend Setup (React)
+## Frontend Setup (React)
 
-# Navigate into the project folder
+### Navigate into the project folder
 cd coffee-shop
 
-# Install dependencies
+### Install dependencies
 npm install
 
 
-## Local development:
+### Local development:
 Create .env.local in the frontend folder:
 REACT_APP_API_URL=http://localhost:5000
 
-# Run the app locally
+### Run the app locally
 npm start
 
 ## Production (Vercel):
@@ -48,18 +48,19 @@ Set environment variable in Vercel dashboard:
 REACT_APP_API_URL=https://coffee-shop-production-e224.up.railway.app
 
 
-# Build for production
+## Build for production
 npm run build
 
-#Live demo:
+##Live demo:
 https://Aleen-coder.github.io/coffee-shop
 
 
-### Backend Setup (Express + MySQL)
+## Backend Setup (Express + MySQL)
 
 cd Backend
 npm install
-## Local development:
+
+### Local development:
 Create .env.local in the backend folder:
 .env.local:
 MYSQLDATABASE=coffee-shop
@@ -68,7 +69,7 @@ MYSQLPORT=3306
 MYSQLUSER=root
 MYSQLPASSWORD=
 
-# Run:
+### Run:
 npm start
 ## Production (Railway):
 Set environment variables in Railway dashboard:

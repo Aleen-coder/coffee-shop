@@ -54,7 +54,7 @@ REACT_APP_API_URL=https://coffee-shop-production-e224.up.railway.app
 npm run build
 
 ##Live demo:
-https://Aleen-coder.github.io/coffee-shop
+https://coffee-shop-tau.vercel.app
 
 
 ## Backend Setup (Express + MySQL)
@@ -102,7 +102,7 @@ MYSQLPASSWORD=cfEDGeFkDkpnMLCdEYBExtfRPcAMtVKA
 
 ### Home Page
 
-<img src="screenshots/h1.PNG" width="600"/><img src="screenshots/home_2.PNG" width="600"/>
+<img src="screenshots/home_2.PNG" width="600"/>
 
 ### Menu Page
 <img src="screenshots/Menu.PNG" width="500" style="margin-bottom: -10px;"/>

@@ -120,4 +120,10 @@ MYSQLPASSWORD=cfEDGeFkDkpnMLCdEYBExtfRPcAMtVKA
 <img src="screenshots/Contact1.PNG" width="500" style="margin-bottom: -10px;"/>
 <img src="screenshots/Contact2.PNG" width="500" style="margin-bottom: -10px;"/>
 
+### Login Page
+<img src="screenshots/Login.PNG" width="500"/>
+
+### Register Page
+<img src="screenshots/Register.PNG" width="500"/>
+
 

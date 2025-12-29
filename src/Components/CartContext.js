@@ -41,7 +41,8 @@ await api.post("/cart", {
   product_id: item.id, quantity: 1, 
   name: item.name,
   // price: item.price, 
-  // image_url: item.image_url, });
+ //  image_url: item.image_url,
+   });
 
   
    // refresh cart

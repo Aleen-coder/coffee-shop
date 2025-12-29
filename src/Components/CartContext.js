@@ -14,9 +14,11 @@ export function CartProvider({ children }) {
       const fetchCart = async () => {
         try {
           const res = await api.get(`/cart/${userId}`);
-          setCartItems(res.data.cartItems || []);
+           // backend returns an array directly, not { cartItems: [...] } 
+           setCartItems(res.data || []);
         } catch (err) {
-          console.error("Error loading cart:", err);
+          console.error("Error loading cart:", err.response || err.message || err);
+
         }
       };
       fetchCart();
@@ -29,8 +31,8 @@ export function CartProvider({ children }) {
        product_id: item.id,
       quantity: 1,
       name: item.name,
-      price: item.price, 
-      image_url: item.image_url,
+    //  price: item.price, 
+     // image_url: item.image_url,
  
     });  
   
@@ -38,13 +40,15 @@ await api.post("/cart", {
   user_id: userId, 
   product_id: item.id, quantity: 1, 
   name: item.name,
-   price: item.price, 
-   image_url: item.image_url, });
+  // price: item.price, 
+  // image_url: item.image_url, });
 
   
    // refresh cart
     const res = await api.get(`/cart/${userId}`); 
-  setCartItems(res.data.cartItems || []);
+ // setCartItems(res.data.cartItems || []);
+  setCartItems(res.data || []);
+
   };
 
      // Remove item from cart 

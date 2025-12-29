@@ -101,7 +101,8 @@ MYSQLPASSWORD=cfEDGeFkDkpnMLCdEYBExtfRPcAMtVKA
 ## Screenshots of the UI
 
 ### Home Page
-<img src="screenshots/Home.PNG" width="600"/>
+
+<img src="screenshots/h1.PNG" width="600"/><img src="screenshots/home_2.PNG" width="600"/>
 
 ### Menu Page
 <img src="screenshots/Menu.PNG" width="500" style="margin-bottom: -10px;"/>

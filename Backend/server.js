@@ -1,7 +1,6 @@
 
 import express from "express";
 import cors from "cors";
-import mysql from "mysql2";
 import db from "./db.js";//  MySQL connection
 
 
@@ -25,16 +24,15 @@ db.connect((err) => {
 });
 
 
-
+//Root route
       app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
 
-// Enable CORS for your Vercel frontend
+//Test DB routes
 
 app.get("/test-db", async (req, res) => {
-  try {
     db.query("SELECT * FROM users LIMIT 1", (err, result) => {
       if (err) {
         console.error("DB query error:", err);
@@ -42,10 +40,6 @@ app.get("/test-db", async (req, res) => {
       }
       res.send("DB connected! First user: " + JSON.stringify(result[0]));
     });
-  } catch (error) {
-    console.error("Route error:", error);
-    res.status(500).send("Server error: " + error.message);
-  }
 });
 
 

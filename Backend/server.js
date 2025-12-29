@@ -1,19 +1,21 @@
+
 import express from "express";
 import cors from "cors";
 import mysql from "mysql2";
-import db from "./db.js";
-const app = express();
+import db from "./db.js";//  MySQL connection
 
+
+const app = express();
+// Enable CORS for your Vercel frontend
 app.use(cors({
   origin: "https://coffee-shop-tau.vercel.app", 
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-   credentials: true }));
+   credentials: true
+   }));
 
-
-
+app.use(express.json());
 
 // Test connection
-
 db.connect((err) => {
   if (err) {
     console.error("MySQL connection error:", err);
@@ -22,7 +24,7 @@ db.connect((err) => {
   }
 });
 
-
+// Enable CORS for your Vercel frontend
 app.get("/test-db", (req, res) => { 
   db.query("SELECT * FROM users LIMIT 1", (err, result) => {
      if (err) {
@@ -394,7 +396,7 @@ app.post("/contact", (req, res) => {
 // =========================
 //  // Start server //
 //  ========================= 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
  //  Railway's PORT 
   app.listen(PORT, () => { 
  console.log(`Server started running on port ${PORT}`); 

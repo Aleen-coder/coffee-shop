@@ -102,7 +102,7 @@ MYSQLPASSWORD=cfEDGeFkDkpnMLCdEYBExtfRPcAMtVKA
 
 ### Home Page
 
-<img src="screenshots/home_2.PNG" width="600"/>
+<img src="screenshots/h3.PNG" width="500"/>
 
 ### Menu Page
 <img src="screenshots/Menu.PNG" width="500" style="margin-bottom: -10px;"/>
